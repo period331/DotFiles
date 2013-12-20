@@ -1,0 +1,32 @@
+server
+{
+    listen 80;
+    server_name *.dev.me;
+
+    root /home/zhangming/development/gandalf;
+
+    index main.php index.html;
+
+    if ($host ~ ^(\w+)\.(.*)\.dev\.me$ )
+    {
+        set $app     $1;
+        set $path    /home/zhangming/development/$2;
+    }
+
+    location ~ \.(html|js|css|gif|jpg|png|swf|ico)$
+    {
+        root $path/public;
+    }
+    location / {
+        try_files $uri $uri/ /main.php?$args;
+
+    }
+    location ~ \.php$ {
+        #fastcgi_pass   127.0.0.1:9000;
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param REQUEST_APPLICATION $app;
+        fastcgi_param DEV_ENV ting_dev;
+        include fastcgi_params;
+    }
+}
