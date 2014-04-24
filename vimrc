@@ -6,43 +6,42 @@ filetype off                   " required!
 let mapleader = ','
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" My Bundles here:
-Bundle 'marijnh/tern_for_vim'
-Bundle 'joonty/vdebug.git'
-Bundle 'gmarik/sudo-gui.vim'
-Bundle 'mhinz/vim-signify'
-Bundle 'vim-scripts/nginx.vim'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'mileszs/ack.vim.git'
-Bundle 'chriskempson/vim-tomorrow-theme.git'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'scrooloose/nerdtree'
-Bundle 'nathanaelkane/vim-indent-guides.git'
-Bundle 'bling/vim-airline'
-Bundle 'jeetsukumaran/vim-buffergator.git'
-Bundle 'tomtom/tcomment_vim.git'
-" Bundle 'majutsushi/tagbar.git'
-Bundle 'esukram/vim-taglist'
-Bundle 'Shougo/neocomplcache.vim'
-Bundle 'ervandew/supertab'
-Bundle 'shawncplus/phpcomplete.vim'
+" My Plugins here:
+Plugin 'marijnh/tern_for_vim'
+Plugin 'joonty/vdebug.git'
+Plugin 'gmarik/sudo-gui.vim'
+Plugin 'mhinz/vim-signify'
+Plugin 'vim-scripts/nginx.vim'
+Plugin 'mileszs/ack.vim.git'
+Plugin 'chriskempson/vim-tomorrow-theme.git'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'scrooloose/nerdtree'
+Plugin 'nathanaelkane/vim-indent-guides.git'
+Plugin 'bling/vim-airline'
+Plugin 'jeetsukumaran/vim-buffergator.git'
+Plugin 'tomtom/tcomment_vim.git'
+" Plugin 'majutsushi/tagbar.git'
+Plugin 'esukram/vim-taglist'
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'ervandew/supertab'
+Plugin 'shawncplus/phpcomplete.vim'
 " for javascript indent
-Bundle 'jelera/vim-javascript-syntax.git'
-Bundle 'guileen/simple-javascript-indenter.git'
-Bundle 'mattn/emmet-vim'
-Bundle 'xolox/vim-misc.git'
-Bundle 'xolox/vim-session.git'
+Plugin 'jelera/vim-javascript-syntax.git'
+Plugin 'guileen/simple-javascript-indenter.git'
+Plugin 'mattn/emmet-vim'
+Plugin 'xolox/vim-misc.git'
+Plugin 'xolox/vim-session.git'
 " for php5.4
-Bundle 'donnut/vim-php54-syntax'
-Bundle '2072/PHP-Indenting-for-VIm.git'
+Plugin 'donnut/vim-php54-syntax'
+Plugin '2072/PHP-Indenting-for-VIm.git'
 " snipMate dependencies
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -50,21 +49,22 @@ Bundle "honza/vim-snippets"
 " snipMate
 Bundle 'garbas/vim-snipmate'
 
-Bundle 'stephpy/vim-phpdoc.git'
-Bundle 'jiangmiao/auto-pairs.git'
-Bundle 'kien/ctrlp.vim'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'groenewege/vim-less'
-Bundle 'tpope/vim-surround.git'
+Plugin 'stephpy/vim-phpdoc.git'
+Plugin 'jiangmiao/auto-pairs.git'
+Plugin 'kien/ctrlp.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-surround.git'
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
 " non github repos
 " ...
 
+call vundle#end()
 filetype plugin indent on     " required!
 
 autocmd FileType * set shiftwidth=4 | set expandtab | set tabstop=4
@@ -94,10 +94,10 @@ set list
 
 
 if has('gui_macvim')
-    colorscheme Tomorrow
+    colorscheme Tomorrow-Night
     " set fuoptions=maxvert
     " set guifont=Source\ Code\ Pro:h12
-    set guifont=Andale\ Mono:h12
+    set guifont=Andale\ Mono:h14
     " set guifont=TheMixMono-Regular:h12
     set linespace=2
     " set guioptions-=T  "no toolbar
@@ -114,6 +114,8 @@ else
 endif
 
 let g:colors_name = ''
+
+let NERDTreeIgnore = ['\.pyc$']
 
 let g:multi_cursor_use_default_mapping = 0
 let g:multi_cursor_next_key = '<D-d>'
