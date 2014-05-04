@@ -2,7 +2,20 @@ set nocompatible  " be IMproved
 set mouse=a
 
 set clipboard+=unnamed " 共享剪贴板
-filetype on " 启用文件类型侦测
+filetype off " 是否启用文件类型侦测
+
+" vundle 配置块开始   >>>>>>>>>>>>>>>>>>
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'L9'
+
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+" vundle 配置块结束  <<<<<<<<<<<<<<<<<<<<
 
 syntax on " 语法高亮
 
