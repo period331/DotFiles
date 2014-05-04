@@ -20,6 +20,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'ervandew/supertab'
 Plugin 'shawncplus/phpcomplete.vim'
+" for php
+Plugin 'donnut/vim-php54-syntax'
+Plugin '2072/PHP-Indenting-for-VIm.git'
+Plugin 'stephpy/vim-phpdoc.git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
