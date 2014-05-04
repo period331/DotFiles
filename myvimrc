@@ -12,7 +12,14 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'bling/vim-airline'
-
+" Indent
+Plugin 'jelera/vim-javascript-syntax.git'
+Plugin 'guileen/simple-javascript-indenter.git'
+Plugin 'mattn/emmet-vim'
+" complete
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'ervandew/supertab'
+Plugin 'shawncplus/phpcomplete.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
