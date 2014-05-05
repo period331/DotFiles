@@ -24,6 +24,8 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'donnut/vim-php54-syntax'
 Plugin '2072/PHP-Indenting-for-VIm.git'
 Plugin 'stephpy/vim-phpdoc.git'
+" theme
+" Plugin 'lsdr/monokai'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -73,6 +75,30 @@ set softtabstop=4         " 统一缩进为4
 set shiftwidth=4          "
 
 set expandtab             " 制表符翻译为空格
+
+if has('gui_macvim')
+    colorscheme Molokai
+    let g:molokai_original = 1
+    let g:rehash256 = 1
+    " set fuoptions=maxvert
+    " set guifont=Source\ Code\ Pro:h12
+    set guifont=Monaco:h13
+    " set guifont=TheMixMono-Regular:h12
+    set linespace=2
+    " set guioptions-=T  "no toolbar
+    " set guioptions-=l
+    " set guioptions-=L
+    " set guioptions-=r
+    " set guioptions-=R
+    let g:ctrlp_working_path_mode = 'ra'
+else
+    colorscheme Molokai
+    let g:molokai_original = 1
+    let g:indent_guides_auto_colors = 0
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=0
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
+endif
+
 
 " vundle 插件配置 >>>>>>>>
 " airline unicode symbols
