@@ -1,6 +1,8 @@
 set nocompatible  " be IMproved
 set mouse=a
 
+let mapleader = ','
+
 set clipboard+=unnamed " 共享剪贴板
 filetype off " 是否启用文件类型侦测
 
@@ -26,6 +28,15 @@ Plugin '2072/PHP-Indenting-for-VIm.git'
 Plugin 'stephpy/vim-phpdoc.git'
 " theme
 " Plugin 'lsdr/monokai'
+
+" for golang
+Plugin 'fatih/vim-go'
+
+" neo
+Bundle 'Shougo/neocomplete'
+
+Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -112,5 +123,18 @@ let g:airline_paste_symbol = '∥'
 let g:airline_whitespace_symbol = 'Ξ'
 let g:airline_enable_branch = 1
 let g:airline_enable_syntasic = 1
+" for vim-go
+au FileType go nmap <Leader>i <Plug>(go-import)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap gd <Plug>(go-def)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+let g:go_fmt_autosave = 0
 
 " <<<<<<<<

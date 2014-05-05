@@ -28,7 +28,7 @@ Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'bling/vim-airline'
 Plugin 'jeetsukumaran/vim-buffergator.git'
 Plugin 'tomtom/tcomment_vim.git'
-" golang 
+" golang
 Bundle 'Blackrush/vim-gocode'
 Plugin 'fatih/vim-go'
 
