@@ -16,6 +16,9 @@ Plugin 'L9'
 Plugin 'bling/vim-airline'
 Plugin 'yonchu/accelerated-smooth-scroll' " 提供平滑滚动
 Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/git-nerdtree'
+
 " Indent
 Plugin 'jelera/vim-javascript-syntax.git'
 Plugin 'guileen/simple-javascript-indenter.git'
@@ -143,6 +146,20 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 let g:go_fmt_autosave = 0
+" nerdtree
+let NERDTreeIgnore = ['\.pyc$']
+nmap <leader>k :NERDTreeToggle<cr>
+
+" neocomplacache and superTab setting
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_disable_auto_complete = 1
+"let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
+let g:SuperTabLongestEnhanced = 1
+let g:SuperTabLeadingSpaceCompletion = 0
+let g:SuperTabClosePreviewOnPopupClose = 1
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType ="<C-X><C-U>"
+
 " neocomplete
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
