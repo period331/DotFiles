@@ -32,6 +32,9 @@ Plugin 'stephpy/vim-phpdoc.git'
 " for golang
 Plugin 'fatih/vim-go'
 
+" python
+Plugin 'hynek/vim-python-pep8-indent'
+
 " neo
 Bundle 'Shougo/neocomplete'
 
@@ -54,7 +57,7 @@ set encoding=utf-8
 set autoread
 set autowrite
 set fileformats=unix,dos,mac
-set backspace=indent,eol,start
+set backspace=indent,eol,start whichwrap+=<,>,[,]  " 允许退格键的使用
 
 " hlsearch set
 set incsearch             " 搜索时逐个高亮搜索词
