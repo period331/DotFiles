@@ -6,7 +6,7 @@ let mapleader = ','
 set clipboard+=unnamed " 共享剪贴板
 filetype off " 是否启用文件类型侦测
 
-" vundle 配置块开始   >>>>>>>>>>>>>>>>>>
+" vundle 配置块开始
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -18,6 +18,7 @@ Plugin 'yonchu/accelerated-smooth-scroll' " 提供平滑滚动
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/git-nerdtree'
+Plugin 'jeetsukumaran/vim-buffergator'
 
 " Indent
 Plugin 'jelera/vim-javascript-syntax.git'
@@ -50,7 +51,7 @@ Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-" vundle 配置块结束  <<<<<<<<<<<<<<<<<<<<
+" vundle 配置块结束
 
 syntax on " 语法高亮
 
@@ -121,7 +122,7 @@ else
 endif
 
 
-" vundle 插件配置 >>>>>>>>
+" vundle 插件配置
 " airline unicode symbols
 let g:airline_linecolumn_prefix = '␊ '
 let g:airline_linecolumn_prefix = '␤ '
@@ -244,7 +245,6 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-let g:neocomplete#force_overwrite_completefunc=1  " fix Another plugin set completefunc! Disabled neocomplete.
+let g:neocomplete#force_overwrite_completefunc=1
 
-
-" <<<<<<<<
+"
