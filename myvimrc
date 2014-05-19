@@ -6,6 +6,10 @@ let mapleader = ','
 set clipboard+=unnamed " 共享剪贴板
 filetype off " 是否启用文件类型侦测
 
+" syntastic
+call pathogen#infect()
+execute pathogen#infect()
+
 " vundle 配置块开始
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -14,11 +18,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'bling/vim-airline'
-Plugin 'yonchu/accelerated-smooth-scroll' " 提供平滑滚动
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/git-nerdtree'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'scrooloose/syntastic'
 
 " Indent
 Plugin 'jelera/vim-javascript-syntax.git'
