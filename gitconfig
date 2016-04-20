@@ -1,97 +1,96 @@
 [user]
-  name = zhangming
-  email = zhangming@ec3s.com 
+    name = baocaixiong
+    email = baocaixiong@gmail.com
 [advice]
-  statusHints = false
+    statusHints = false
 [alias]
-  a   = add
-  b   = branch -v
-  m   = merge
-  mt  = mergetool
-  nc  = checkout -b
-  pl  = pull
-  plr = pull --rebase
-  pu  = push
-  untrack = rm -r --cached
-  dupes = !git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40
+    a   = add
+    b   = branch -v
+    m   = merge
+    mt  = mergetool
+    nc  = checkout -b
+    pl  = pull
+    plr = pull --rebase
+    pu  = push
+    untrack = rm -r --cached
+    dupes = !git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40
 
-  # commit
-  c = commit
-  ca = commit -a
-  co = checkout
-  cv = commit -v
-  cav = commit -av
+    # commit
+    c = commit
+    ca = commit -a
+    co = checkout
+    cv = commit -v
+    cav = commit -av
 
-  # fetch
-  fetchall = fetch -v --all
+    # fetch
+    fetchall = fetch -v --all
+    # diff
+    d   = diff
+    dc  = diff --cached
+    wd  = diff --word-diff=plain
+    last = diff HEAD^
 
-  # diff
-  d   = diff
-  dc  = diff --cached
-  wd  = diff --word-diff=plain
-  last = diff HEAD^
+    # grep
+    gr = grep -Ii
 
-  # grep
-  gr = grep -Ii
+    # log
+    l = log
+    lp = log -p
+    ls = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
+    lc = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+    lg = log --graph
 
-  # log
-  l = log
-  lp = log -p
-  ls = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
-  lc = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
-  lg = log --graph
+    # rebase
+    rb = rebase
+    rc = rebase --continue
+    rs = rebase --skip
 
-  # rebase
-  rb = rebase
-  rc = rebase --continue
-  rs = rebase --skip
+    # remote
+    r = remote
 
-  # remote
-  r = remote
+    # reset
+    unstage = reset HEAD
 
-  # reset
-  unstage = reset HEAD
+    # stash
+    ss = stash
+    sl = stash list
+    sa = stash apply
 
-  # stash
-  ss = stash
-  sl = stash list
-  sa = stash apply
+    # status
+    s = status -s
+    st = status
 
-  # status
-  s = status -s
-  st = status
-  
-  # branch
-  br = branch
+    # branch
+    br = branch
 
-  # tag
-  t = tag
+    # tag
+    t = tag
 
-  # misc
-  save-untracked = !git ls-files --others --exclude-standard -z | cpio -pmd0
+    # misc
+    save-untracked = !git ls-files --others --exclude-standard -z | cpio -pmd0
 [branch]
-  autosetuprebase = always
+    autosetuprebase = always
 [color]
-  ui = true
-  status = auto
-  grep = always
+    ui = true
+    status = auto
+    grep = always
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-  meta = yellow bold
-  old = red bold
-  new = green bold
-  frag = magenta bold
+    meta = yellow bold
+    old = red bold
+    new = green bold
+    frag = magenta bold
 [github]
-  user = baocaixiong
+    user = baocaixiong
 [merge]
-  tool = vimdiff
+    tool = vimdiff
 [push]
-  default = tracking
+    default = tracking
 [url "git://github.com/"]
-  insteadOf = gh:
+    insteadOf = gh:
 
 [difftool]
     prompt = false
@@ -99,10 +98,6 @@
 [megretool]
     prompt = false
 
-[difftool "ksdiff"]
-  cmd = ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"
-[mergetool "ksdiff"]
-  cmd = ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" --snapshot "$REMOTE" --snapshot
 [core]
-	editor = vim
-	quotepath = false
+    editor = vim
+    quotepath = false
