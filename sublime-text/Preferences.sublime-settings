@@ -1,29 +1,46 @@
-//1. install Material Theme cmd + shift + p => Type "install" press enter => Search for "Material Theme"
+// cinstall = cmd + shift + p and Type "install" press enter
+
+//1. Material Theme: CINSTALL => Search for "Material Theme": 神级主题
+//2. GitGutter: CINSTALL => search for "gitgutter"
+//3. GitSavvy: CINSTALL => search for "GitSavvy"
+//4. SublimeLinter: CINSTALL => search for "SublimeLinter"
+//5. BracketHighlighter: CINSTALL => search for "BracketHighlighter": 括号高亮
+//6. MagicPython: CINSTALL => search for "MagicPython": 更好的Python语法高亮
+//7. Anaconda: CINSTALL => search for "Anaconda": Python神器
+//8. Anaconda_php: CINSTALL => search for "Anaconda_php": 同理php
 
 {
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"drag_text": false,
+	"font_options":
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 12,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 	],
-	"translate_tabs_to_spaces": true,
-    "theme": "Material-Theme.sublime-theme",
-    "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme" ,
-    "material_theme_small_tab": true,
-    "material_theme_small_statusbar": true,
-    "material_theme_bold_tab": true,
-    "material_theme_tabs_separator": true,
-    "material_theme_panel_separator": true,
-    "material_theme_tabs_autowidth": true,
-    "material_theme_contrast_mode": true,
-    "material_theme_tree_headings": true,
-
-    "overlay_scroll_bars"          : "enabled",
-    "line_padding_top"             : 1,
-    "line_padding_bottom"          : 1,
-    "always_show_minimap_viewport" : true,
-    "bold_folder_labels"           : true,
-    "indent_guide_options"         : [ "draw_normal", "draw_active" ],   // Highlight active indent
-    "font_options"                 : [ "gray_antialias", "subpixel_antialias" ],    // On retina Mac & Windows
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"material_theme_bold_tab": true,
+	"material_theme_contrast_mode": true,
+	"material_theme_panel_separator": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_autowidth": true,
+	"material_theme_tabs_separator": true,
+	"material_theme_tree_headings": true,
+	"overlay_scroll_bars": "enabled",
+	"theme": "Material-Theme.sublime-theme",
+	"translate_tabs_to_spaces": true
 }
