@@ -10,37 +10,38 @@
 //8. Anaconda_php: CINSTALL => search for "Anaconda_php": 同理php
 
 {
-	"always_show_minimap_viewport": true,
-	"bold_folder_labels": true,
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
-	"drag_text": false,
-	"font_options":
-	[
-		"gray_antialias",
-		"subpixel_antialias"
-	],
-	"font_size": 12,
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
-	"ignored_packages":
-	[
-	],
-	"indent_guide_options":
-	[
-		"draw_normal",
-		"draw_active"
-	],
-	"line_padding_bottom": 1,
-	"line_padding_top": 1,
-	"material_theme_bold_tab": true,
-	"material_theme_contrast_mode": true,
-	"material_theme_panel_separator": true,
-	"material_theme_small_statusbar": true,
-	"material_theme_small_tab": true,
-	"material_theme_tabs_autowidth": true,
-	"material_theme_tabs_separator": true,
-	"material_theme_tree_headings": true,
-	"overlay_scroll_bars": "enabled",
-	"theme": "Material-Theme.sublime-theme",
-	"translate_tabs_to_spaces": true
+    "always_show_minimap_viewport": true,
+    "bold_folder_labels": true,
+    "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+    "drag_text": false,
+    "font_options":
+    [
+        // "gray_antialias",
+        "subpixel_antialias"
+    ],
+    "font_size": 12,
+    "font-face": "Cousine",  // 需要安装https://github.com/chrissimpkins/codeface
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "ignored_packages":
+    [
+    ],
+    "indent_guide_options":
+    [
+        "draw_normal",
+        "draw_active"
+    ],
+    "line_padding_bottom": 1,
+    "line_padding_top": 1,
+    "material_theme_bold_tab": true,
+    "material_theme_contrast_mode": true,
+    "material_theme_panel_separator": true,
+    "material_theme_small_statusbar": true,
+    "material_theme_small_tab": true,
+    "material_theme_tabs_autowidth": true,
+    "material_theme_tabs_separator": true,
+    "material_theme_tree_headings": true,
+    "overlay_scroll_bars": "enabled",
+    "theme": "Material-Theme.sublime-theme",
+    "translate_tabs_to_spaces": true
 }
