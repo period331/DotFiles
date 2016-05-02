@@ -1,0 +1,33 @@
+variants:
+    dev:
+        bcmath:
+        bz2:
+        calendar:
+        cli:
+        ctype:
+        dom:
+        fileinfo:
+        filter:
+        ipc:
+        json:
+        mbregex:
+        mbstring:
+        mhash:
+        mcrypt:
+        openssl:
+          - --with-openssl-dir=/usr/local/opt/openssl
+        json:
+        curl:
+        mysql:
+        session:
+        cli:
+        fpm:
+        mb:
+        xml_all:
+        debug:
+        pdo:
+        default:
+extensions:
+    dev:
+        xhprof: latest
+        xdebug: stable

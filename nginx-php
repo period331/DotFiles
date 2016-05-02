@@ -1,0 +1,58 @@
+#!/bin/sh
+
+NGINX="/usr/local/bin/nginx"
+PHP5533="$HOME/.phpbrew/php/php-5.5.33/sbin/php-fpm"
+PHP7006="$HOME/.phpbrew/php/php-7.0.6/sbin/php-fpm"
+
+PID_PATH="/usr/local/var/run/"
+
+start_app() {
+    command=$1
+    ver=$2
+    pid="$PID_PATH$ver.pid"
+
+    if [ -f $pid ]; then
+        echo "> ×× $ver is running ..."
+    else
+        `sudo $command`
+    fi
+}
+
+stop_app() {
+    ver=$1
+    pid="$PID_PATH$ver.pid"
+    if [ -f $pid ]; then
+        sudo kill `cat $pid`
+    else
+        echo "> ×× $ver is not running."
+    fi
+}
+
+start () {
+    echo "Start php-fpm ..."
+    start_app "$PHP5533" "php5533-fpm"
+    start_app "$PHP7006" "php7006-fpm"
+    echo "Start Nginx ..."
+    start_app $NGINX "nginx"
+    echo "Done!"
+}
+
+stop() {
+    echo "Stop Nginx ..."
+    stop_app "nginx"
+    echo "Stop php-fpm ..."
+    stop_app "php5533-fpm"
+    stop_app "php7006-fpm"
+    echo "Done!"
+}
+
+if [[ $1 = "start" ]]; then
+    start
+elif [[ $1 = "stop" ]]; then
+    stop
+elif [[ $1 = "restart" ]]; then
+    stop
+    start
+else
+    echo "Valid commands: {start|stop|restart}"
+fi
