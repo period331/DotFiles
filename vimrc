@@ -41,6 +41,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,8 +69,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 " }}NERDtree git
 
-
-
+colorscheme wombat
 
 " Brief help
 " :PluginList       - lists configured plugins
