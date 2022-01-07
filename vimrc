@@ -5,6 +5,7 @@ set noundofile
 set nobackup
 set noswapfile
 set encoding=utf-8
+set fileencodings=utf-8,gbk
 set autoread
 set autowrite
 set fileformats=unix,dos,mac
